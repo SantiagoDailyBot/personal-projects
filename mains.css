@@ -1,0 +1,148 @@
+/* General Body Styles */
+body {
+    background-color: #f4f7fb; /* Cambio a un color de fondo más suave */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #444; /* Color de texto más suave */
+}
+
+/* Centering the App */
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Heading Styles */
+#app h1 {
+    font-size: 2.5em;
+    color: #444;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+/* Time Value Styles */
+#time #value {
+    font-size: 4em; /* Más grande para resaltar el tiempo */
+    font-weight: bold;
+    color: #ff6347; /* Color vibrante */
+    margin: 0.5em 0;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+/* Input field Styles */
+input[type="text"] {
+    width: 100%;
+    padding: 0.8em;
+    font-size: 1.1em;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #ff6347;
+    outline: none;
+}
+
+/* Button Styles */
+button,
+input[type="submit"] {
+    padding: 0.8em 1.5em;
+    font-size: 1.1em;
+    border: 0;
+    border-radius: 8px;
+    background-color: #4caf50; /* Verde vibrante */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #45a049; /* Hover effect */
+}
+
+/* Task List Styles */
+#tasks {
+    margin-top: 2em;
+    width: 100%;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.task:hover {
+    background-color: #f1f1f1;
+}
+
+/* Task Completion Styles */
+.task .completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task .start-button {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6347; /* Color de botón más vibrante */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task .start-button:hover {
+    background-color: #e5533f; /* Hover effect */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+    #app {
+        padding: 1em;
+    }
+
+    #app h1 {
+        font-size: 1.8em;
+    }
+
+    #time #value {
+        font-size: 3em;
+    }
+
+    input[type="text"], button, input[type="submit"] {
+        font-size: 1em;
+        padding: 0.7em;
+    }
+
+    .task {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.8em;
+    }
+
+    .task .completed {
+        margin-top: 0.5em;
+    }
+}
